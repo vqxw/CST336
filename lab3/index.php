@@ -17,6 +17,7 @@
         </audio>
         
         <?php
+        $time_start = microtime(true);
         
             // initializing a list of players
             $player1 = array(
@@ -173,6 +174,11 @@
             echo "</div>";
             
             displayWinner($allPlayers);
+            
+            $time_end = microtime(true);
+            $time = $time_end - $time_start;
+            echo "Process Time: {$time}";
+            //Process Time: 1.0000340938568
         ?>
         
         <div id = "main" style = "text-align:center">
